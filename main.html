@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="tindr">
+<html ng-app="tinder">
 <head>
 	<title>Sean Baillargeon</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
@@ -7,19 +7,28 @@
 	<script type="text/javascript" src="main.js"> </script>
 </head>
 <body ng-controller="profile">
-
+	<h1>Tinder</h1>
 	<div>
 		<img src="sean.jpg">
 	</div>
-
-		<h3>Hobbies</h3>
-		<p>Lorem ipsum dolor sit amet, id alterum postulant cotidieque mea, sed nisl sadipscing intellegebat eu. Duo at deleniti delicata, at vel tibique reformidans, in vero meliore vim. Abhorreant accommodare est ut, debitis voluptaria appellantur qui ad, duo an dicit utamur.</p>
-		
-		<h3>What I Love About Myself</h3>
-		<p>Vix viris officiis ei, rebum simul cetero vel ea. Et vis ludus libris tibique, quo et velit movet consequuntur. Duo brute sanctus mnesarchum at, quem definiebas eloquentiam ne qui. Etiam consectetuer cu has. Pro cu partem audiam facilis, liber epicuri scribentur vis cu.</p>
-		
-		<h3>Why You Should Date Me</h3>
-		<p>Tantas melius persequeris sit ne, ut facer iudicabit sea. An mei velit docendi ponderum, solum dolorum suavitate an nec, vix agam ferri iriure an. Has prodesset posidonium necessitatibus ei. Nisl aperiri virtute nam et. Errem affert sed ex, an laudem aliquando scribentur duo.</p>
+	<h2>Sean Baillargeon</h1>
+	<h3>Hobbies</h3>
+	<div>
+	<p ng-model="para[0]" ng-click='modify(0)'>Lorem ipsum dolor sit amet, id alterum postulant cotidieque mea, sed nisl sadipscing intellegebat eu. Duo at deleniti delicata, at vel tibique reformidans, in vero meliore vim. Abhorreant accommodare est ut, debitis voluptaria appellantur qui ad, duo an dicit utamur.</p>
+	<textarea ng-model="input[0]" ng-show='showInput[0]' ng-blur='doneTalking(0)'>{{para[0]}}</textarea>
+	</div>
+	
+	<h3>What I Love About Myself</h3>
+	<div>
+	<p ng-model="para[1]" ng-click='modify(1)'>Vix viris officiis ei, rebum simul cetero vel ea. Et vis ludus libris tibique, quo et velit movet consequuntur. Duo brute sanctus mnesarchum at, quem definiebas eloquentiam ne qui. Etiam consectetuer cu has. Pro cu partem audiam facilis, liber epicuri scribentur vis cu.</p>
+	<textarea ng-model="input[1]" ng-show='showInput[1]' ng-blur='doneTalking(1)'>{{para[1]}}</textarea>
+	</div>
+	
+	<h3>Why You Should Date Me</h3>
+	<div>
+	<p ng-model="para[1]" ng-click='modify(2)'>Tantas melius persequeris sit ne, ut facer iudicabit sea. An mei velit docendi ponderum, solum dolorum suavitate an nec, vix agam ferri iriure an. Has prodesset posidonium necessitatibus ei. Nisl aperiri virtute nam et. Errem affert sed ex, an laudem aliquando scribentur duo.</p>
+	<textarea ng-model="input[2]" ng-show='showInput[2]' ng-blur='doneTalking(0)'>{{para[2]}}</textarea>
+	</div>
 
 </body>
 </html>
