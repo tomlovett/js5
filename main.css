@@ -12,7 +12,14 @@ textarea {
 }
 
 img {
-	height: 400px;
+	height: 300px;
+	width: 300px;
+	margin: 5% auto;
+}
+
+body {
 	width: 400px;
 	margin: 5% auto;
+	background-color: #ff6600;
+	color: white;
 }
